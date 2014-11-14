@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+
   resources :projects
 
   resources :subjects
@@ -7,6 +8,8 @@ Rails.application.routes.draw do
   get 'welcome/home'
 
   root 'welcome#home'
+
+  match 'auth/:provider/callback', :to => 'sessions#create', via: [:get, :post]
 
 
   # The priority is based upon order of creation: first created -> highest priority.
