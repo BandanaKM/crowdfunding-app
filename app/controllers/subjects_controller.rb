@@ -2,13 +2,11 @@ class SubjectsController < ApplicationController
   before_action :set_subject, only: [:show, :edit, :update, :destroy]
 
   # GET /subjects
-  # GET /subjects.json
   def index
     @subjects = Subject.all
   end
 
   # GET /subjects/1
-  # GET /subjects/1.json
   def show
   end
 
@@ -22,7 +20,6 @@ class SubjectsController < ApplicationController
   end
 
   # POST /subjects
-  # POST /subjects.json
   def create
     @subject = Subject.new(subject_params)
 
@@ -38,7 +35,6 @@ class SubjectsController < ApplicationController
   end
 
   # PATCH/PUT /subjects/1
-  # PATCH/PUT /subjects/1.json
   def update
     respond_to do |format|
       if @subject.update(subject_params)
@@ -52,7 +48,6 @@ class SubjectsController < ApplicationController
   end
 
   # DELETE /subjects/1
-  # DELETE /subjects/1.json
   def destroy
     @subject.destroy
     respond_to do |format|
