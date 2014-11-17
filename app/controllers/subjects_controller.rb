@@ -1,26 +1,26 @@
 class SubjectsController < ApplicationController
   before_action :set_subject, only: [:show, :edit, :update, :destroy]
 
-  # GET /subjects
   def index
     @subjects = Subject.all
   end
 
-  # GET /subjects/1
   def show
+    @subject = Subject.find(params[:id])
+    @projects = @subjects.projects
   end
 
-  # GET /subjects/new
   def new
+    authorize @subject
     @subject = Subject.new
   end
 
-  # GET /subjects/1/edit
   def edit
+    authorize @subject
   end
 
-  # POST /subjects
   def create
+    authorize @subject
     @subject = Subject.new(subject_params)
 
     respond_to do |format|
@@ -34,8 +34,9 @@ class SubjectsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /subjects/1
+
   def update
+    authorize @subject
     respond_to do |format|
       if @subject.update(subject_params)
         format.html { redirect_to @subject, notice: 'Subject was successfully updated.' }
@@ -47,8 +48,8 @@ class SubjectsController < ApplicationController
     end
   end
 
-  # DELETE /subjects/1
   def destroy
+    authorize @subject
     @subject.destroy
     respond_to do |format|
       format.html { redirect_to subjects_url, notice: 'Subject was successfully destroyed.' }

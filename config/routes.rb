@@ -2,7 +2,11 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
 
-  resources :projects
+  resources :projects do
+    member do
+      get :pledge
+    end
+  end
 
   resources :subjects
 

@@ -1,26 +1,24 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
-  # GET /projects
   def index
     @projects = Project.all
   end
 
-  # GET /projects/1
   def show
   end
 
-  # GET /projects/new
   def new
+    authorize @project
     @project = Project.new
   end
 
-  # GET /projects/1/edit
   def edit
+    authorize @project
   end
 
-  # POST /projects
   def create
+    authorize @project
     @project = Project.new(project_params)
 
     respond_to do |format|
@@ -34,9 +32,8 @@ class ProjectsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /projects/1
-  # PATCH/PUT /projects/1.json
   def update
+    authorize @project
     respond_to do |format|
       if @project.update(project_params)
         format.html { redirect_to @project, notice: 'Project was successfully updated.' }
@@ -48,14 +45,22 @@ class ProjectsController < ApplicationController
     end
   end
 
-  # DELETE /projects/1
-  # DELETE /projects/1.json
+
   def destroy
+    authorize @project
     @project.destroy
     respond_to do |format|
       format.html { redirect_to projects_url, notice: 'Project was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def pledge
+    # params[:amount]
+    # params[:id]
+    project = Project.find(params[:id])
+    project.pledge(params[:amount], current_user)
+    # redirect to project show page
   end
 
   private

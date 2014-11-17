@@ -20,5 +20,11 @@
   <%= @project.description %>
 </p>
 
+<ul>
+	<% @project.rewards.each do |reward| %>
+	<li><a href='/projects/<%= @project.id %>/pledge?amount=<%= reward %>'>Pledge <%= number_to_currency(reward) %></a></li>
+	<% end %>
+</ul>
+
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
