@@ -5,7 +5,7 @@ class Project < ActiveRecord::Base
   has_many :pledges
 
   def rewards
-  	@rewards = [5,10,25,50,100]
+  	@rewards = [1,10,25,50,100,250,500,1000]
   end
 
   def pledge(amount, user)
