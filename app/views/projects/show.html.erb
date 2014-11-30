@@ -20,9 +20,24 @@
   <%= @project.description %>
 </p>
 
+<p>
+  <strong>Goal:</strong>
+  <%= @project.goal %>
+</p>
+
+<p>
+  <strong>Balance:</strong>
+  <%= @project.balance %>
+</p>
+
+<p>
+  <strong>Days:</strong>
+  <%= @project.days %>
+</p>
+
 <ul>
 	<% @project.rewards.each do |reward| %>
-	<li><a href='/projects/<%= @project.id %>/pledge?amount=<%= reward %>'>Pledge <%= number_to_currency(reward) %></a></li>
+	<li><a href='/projects/<%= @project.id %>/pledge?amount=<%= reward %>&current_user=<%= current_user.id %>'>Pledge <%= number_to_currency(reward) %></a></li>
 	<% end %>
 </ul>
 

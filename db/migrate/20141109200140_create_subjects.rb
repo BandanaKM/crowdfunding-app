@@ -7,3 +7,4 @@ class CreateSubjects < ActiveRecord::Migration
     end
   end
 end
+

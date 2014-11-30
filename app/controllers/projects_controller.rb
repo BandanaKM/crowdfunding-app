@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :set_project, only: [:show, :edit, :update, :destroy, :pledge]
 
   def index
     @projects = Project.all
@@ -55,12 +55,15 @@ class ProjectsController < ApplicationController
     end
   end
 
-  def pledge
-    # params[:amount]
-    # params[:id]
-    project = Project.find(params[:id])
-    project.pledge(params[:amount], current_user)
-    # redirect to project show page
+  def pledge 
+    # project = Project.find(params[:id])
+    # @project.pledge(params[:amount], current_user)
+    @project.pledges.build(amount: params[:amount], user_id: params[:current_user])
+    @project.balance = @project.pledges.to_a.sum(&:amount)
+    puts params[:current_user]
+    # look at apidock.com rails enumerable sum - saves each pledges amount
+    @project.save
+    redirect_to(@project)
   end
 
   private
