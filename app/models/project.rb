@@ -3,6 +3,7 @@ class Project < ActiveRecord::Base
   attr_accessor :rewards
   belongs_to :subject
   has_many :pledges
+  has_many :comments, as: :commentable
 
   validates :title, presence: true
   validates :creator, presence: true

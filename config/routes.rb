@@ -1,12 +1,19 @@
 Rails.application.routes.draw do
 
+  # get 'comments/index'
+
+  # get 'comments/new'
+
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
 
   resources :projects do
     member do
       get :pledge
     end
+    resources :comments
   end
+
+  #need to figure out how i can have the route connect to the pledge comments 
 
   resources :subjects
 
