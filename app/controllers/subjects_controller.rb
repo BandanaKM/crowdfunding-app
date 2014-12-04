@@ -3,6 +3,13 @@ class SubjectsController < ApplicationController
 
   before_filter :authorize
 
+  before_action :require_user, only:
+  #this means you have to be logged in
+
+  before_action :require_admin, only: [:new, :create]
+  #this means you have to be logged in
+
+
   # GET /subjects
   # GET /subjects.json
   def index
