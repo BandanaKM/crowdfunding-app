@@ -1,13 +1,15 @@
 class User < ActiveRecord::Base
 
- has_secure_password
+ has_many :pledges
 
-  def admin?
-    self.role == 'admin'
-  end
+ # has_secure_password
 
-  def moderator?
-    self.role == 'moderator'
-  end
+ #  # def admin?
+ #  #   self.role == 'admin'
+ #  # end
+
+ #  # def moderator?
+ #  #   self.role == 'moderator'
+ #  # end
 
 end
