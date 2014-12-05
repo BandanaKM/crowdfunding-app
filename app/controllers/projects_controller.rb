@@ -63,6 +63,15 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def pledge
+    @project.pledges.build(amount: params[:amount]), user_id: params[:current_user])
+    @project.total = @project.pledges.to_a.sum(&:amount)
+    puts params[:current_user]
+    # look at apidock.com rails enumerable sum - saves each pledges amount
+    @project.save
+    redirect_to(@project)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project
