@@ -4,7 +4,12 @@ Rails.application.routes.draw do
 
   root to: 'welcome#home'
 
-  resources :projects
+  resources :projects do
+    member do 
+      get :pledge
+    end
+  end 
+
   resources :subjects
 
   # these routes are for showing users a login form, logging them in, and logging them out.
