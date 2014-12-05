@@ -1,13 +1,13 @@
 class SubjectsController < ApplicationController
   before_action :set_subject, only: [:show, :edit, :update, :destroy]
 
-  before_filter :authorize
+  # before_filter :authorize
 
-  before_action :require_user, only:
-  #this means you have to be logged in
+  # before_action :require_user, only:
+  # #this means you have to be logged in
 
-  before_action :require_admin, only: [:new, :create]
-  #this means you have to be logged in
+  # before_action :require_admin, only: [:new, :create]
+  # #this means you have to be logged in
 
 
   # GET /subjects
