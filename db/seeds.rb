@@ -32,9 +32,9 @@
 
  	Project.create(title: 'Black Light', creator: 'Marco Flores', image: 'http://bit.ly/1xv8liT', description: "This is more information about the Black Light Kickstarter.", total: 1.00, goal: 100.00, days: 10, subject_id: art.id)
 
- 	Project.create(title: 'Holi Kela', creator: 'Roopa Krithi', image: 'http://bit.ly/13HLgeQ', description: "art_description2 art_description2 art_description2", total: 10.00, goal: 1000.00, days: 11, subject_id: art.id)
+ 	Project.create(title: 'Holi Kela', creator: 'Roopa Krithi', image: 'http://bit.ly/13HLgeQ', description: "This is more information about the Holi Kela Kickstarter.", total: 10.00, goal: 1000.00, days: 11, subject_id: art.id)
 
- 	Project.create(title: 'African Sunset', creator: 'Dixie Reynolds', image: 'http://bit.ly/1A8XWXN', description: "art_description1 art_description1 art_description1", total: 1.00, goal: 100.00, days: 10, subject_id: art.id)
+ 	Project.create(title: 'African Sunset', creator: 'Dixie Reynolds', image: 'http://bit.ly/1A8XWXN', description: "This is more information about the African Sunset Kickstarter.", total: 1.00, goal: 100.00, days: 10, subject_id: art.id)
 
  	Project.create(title: 'Cherry Blossom Tree', creator: 'Alma Dean', image: 'http://bit.ly/1A8XXLu', description: "art_description1 art_description1 art_description1", total: 1.00, goal: 100.00, days: 10, subject_id: art.id)
 
@@ -91,9 +91,9 @@
 
  	Project.create(title: 'Tattoo Dragon Boots', creator: 'Alexis Tryfon', image: 'http://bit.ly/174il73', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: fashion.id)
 
- 	Project.create(title: 'Antique Jewelry', creator: 'Siddharth Bose', image: 'bit.ly/1xawIzQ', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: fashion.id)
+ 	Project.create(title: 'Antique Jewelry', creator: 'Siddharth Bose', image: 'http://bit.ly/13HPanX', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: fashion.id)
 
- 	Project.create(title: 'Rings', creator: 'Yoon Dong', image: 'bit.ly/1xawIzQ', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: fashion.id)
+ 	Project.create(title: 'Rings', creator: 'Yoon Dong', image: 'http://bit.ly/1BgYD0X', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: fashion.id)
 
 
 # film & video
@@ -149,84 +149,84 @@
  	Project.create(title: 'Digital Museum', creator: 'Cai Kao', image: 'http://bit.ly/1A93jpX', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
 
 
- 	Project.create(title: 'Dance4', creator: 'Ruy Mena', image: 'http://bit.ly/1HZysOu', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
+ 	Project.create(title: 'Newspaper Digital News Archive', creator: 'Ruy Mena', image: 'http://bit.ly/1HZysOu', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
 
 
 
 # music
 
-	Project.create(title: 'Music4', creator: 'Jeffrey Day', image: 'bit.ly/1xawIzQ', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
+	Project.create(title: 'New Wave Recording Studio', creator: 'Jeffrey Day', image: 'http://bit.ly/1A93vpp', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
 
 
- 	Project.create(title: 'Music4', creator: 'Lila Clarke', image: 'bit.ly/1xawIzQ', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
+ 	Project.create(title: 'Album Release', creator: 'Lila Clarke', image: 'http://bit.ly/13R8fEr', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
 
 
- 	Project.create(title: 'Music4', creator: 'Cai Kao', image: 'bit.ly/1xawIzQ', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
+ 	Project.create(title: 'Music Education', creator: 'Cai Kao', image: 'http://bit.ly/13R8fEr', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
 
 
- 	Project.create(title: 'Music4', creator: 'Jeevan Grewal', image: 'bit.ly/1xawIzQ', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
+ 	Project.create(title: 'Brass Instrument Exhibit', creator: 'Jeevan Grewal', image: 'http://bit.ly/1A93Acx', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
 
 
 
 
 # photography
 
-	Project.create(title: 'Photo4', creator: 'Majnoon Chehna', image: 'bit.ly/1xawIzQ', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
+	Project.create(title: 'Vintage Cameras', creator: 'Majnoon Chehna', image: 'http://bit.ly/1zOv0qs', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
 
 
- 	Project.create(title: 'Photo4', creator: 'Lily Roy', image: 'bit.ly/1xawIzQ', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
+ 	Project.create(title: 'Graffiti Photo Project', creator: 'Lily Roy', image: 'http://bit.ly/1tivayV', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
 
 
- 	Project.create(title: 'Photo4', creator: 'Rafik Wallace', image: 'bit.ly/1xawIzQ', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
+ 	Project.create(title: 'Alpaca Textiles', creator: 'Rafik Wallace', image: 'bhttp://bit.ly/1y4DHMI', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
 
 
- 	Project.create(title: 'Photo4', creator: 'Jaakko Vähälä', image: 'bit.ly/1xawIzQ', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
+ 	Project.create(title: 'Nature Photography', creator: 'Jaakko Vähälä', image: 'http://bit.ly/1vEQqzO', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
 
 
 # publishing 
 
 
-	Project.create(title: 'Pub4', creator: 'Nazar Singh', image: 'bit.ly/1xawIzQ', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
+	Project.create(title: 'World Calligraphy', creator: 'Nazar Singh', image: 'http://bit.ly/1y4E5Lh', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
 
 
- 	Project.create(title: 'Pub4', creator: 'Yaya Tang', image: 'bit.ly/1xawIzQ', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
+ 	Project.create(title: 'Immersive Archaelogy', creator: 'Yaya Tang', image: 'http://bit.ly/1Bljtfl', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
 
 
- 	Project.create(title: 'Pub4', creator: 'Scarlett Reed', image: 'bit.ly/1xawIzQ', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
+ 	Project.create(title: 'Ajanta Caves', creator: 'Scarlett Reed', image: 'http://bit.ly/13HRwDg', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
 
 
- 	Project.create(title: 'Pub4', creator: 'Aiden Hunter', image: 'bit.ly/1xawIzQ', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
+ 	Project.create(title: 'Deserts of the World', creator: 'Aiden Hunter', image: 'http://bit.ly/1ry4PBA', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
 
 
 # technology
 
 
-	Project.create(title: 'Tech4', creator: 'Ijendu Buchi', image: 'bit.ly/1xawIzQ', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
+	Project.create(title: 'Robot Kit', creator: 'Ijendu Buchi', image: 'http://bit.ly/1A94h5v', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
 
 
- 	Project.create(title: 'Tech4', creator: 'Joakim Levante', image: 'bit.ly/1xawIzQ', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
+ 	Project.create(title: 'Arduino Music Player', creator: 'Joakim Levante', image: 'http://bit.ly/1AgHfLy', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
 
 
- 	Project.create(title: 'Tech4', creator: 'Jahan Khalili', image: 'bit.ly/1xawIzQ', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
+ 	Project.create(title: 'Smart Clothing', creator: 'Jahan Khalili', image: 'http://bit.ly/1xvakDF', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
 
 
- 	Project.create(title: 'Tech4', creator: 'Uza Barek', image: 'bit.ly/1xawIzQ', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
+ 	Project.create(title: 'Math Fundamentals for Software', creator: 'Uza Barek', image: 'http://bit.ly/1y4EcGC', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
 
 
 
 # theater 
 
 
-	Project.create(title: 'Theater4', creator: 'Gabriel Friedman', image: 'bit.ly/1xawIzQ', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
+	Project.create(title: 'Kultars Mime', creator: 'Gabriel Friedman', image: 'http://bit.ly/1Bljy2v', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
 
 
- 	Project.create(title: 'Theater4', creator: 'Jane Wei Hao', image: 'bit.ly/1xawIzQ', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
+ 	Project.create(title: 'Poet Tree Cafe', creator: 'Jane Wei Hao', image: 'http://bit.ly/1xeNnm8', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
 
 
- 	Project.create(title: 'Theater4', creator: 'Zara Lamour', image: 'bit.ly/1xawIzQ', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
+ 	Project.create(title: 'Bhand Pather', creator: 'Zara Lamour', image: 'http://bit.ly/13HRHON', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
 
 
- 	Project.create(title: 'Theater4', creator: 'Feras Qamar', image: 'bit.ly/1xawIzQ', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
+ 	Project.create(title: 'Kora Play', creator: 'Feras Qamar', image: 'http://bit.ly/1D4Gp3W', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
 
 
 

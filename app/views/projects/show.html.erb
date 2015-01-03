@@ -1,3 +1,5 @@
+<%= render '/shared/header' %> 
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -36,11 +38,21 @@
 </p>
 
 
+<p>
+  <strong>Distance of time:</strong>
+  <% Time.now %>
+  <% Time.now + 4.days %>
+  <%= distance_of_time_in_words(Time.now, Time.now + 4.days) %>
+</p>
+
+
+
 <ul>
   <% @project.rewards.each do |reward| %>
   <li><a href='/projects/<%= @project.id %>/pledge?amount=<%= reward %>&current_user=<%= current_user.id %>'>Pledge <%= number_to_currency(reward) %></a></li>
   <% end %>
 </ul>
+
 
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
@@ -126,7 +138,7 @@
       </div>
     </div>
             
-    <div class="footer">
+<!--     <div class="footer">
       <div class="container">
         <div class="links row">
           <div class="col-sm-3">
@@ -193,3 +205,7 @@
     </div>
   </body>
 </html>
+
+ -->
+
+<%= render '/shared/footer' %> 
