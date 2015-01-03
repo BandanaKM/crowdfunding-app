@@ -102,7 +102,7 @@
 
  	Project.create(title: 'Street Art', creator: 'Tyler Waters', image: 'http://bit.ly/1AgFH45', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: film_and_video.id)
 
- 	Project.create(title: 'Persian Miniatures', creator: 'Niranjan Kaur', image: 'http://bit.ly/1ry3hHP', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: film_and_video.id
+ 	Project.create(title: 'Persian Miniatures', creator: 'Niranjan Kaur', image: 'http://bit.ly/1ry3hHP', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: film_and_video.id)
 
  	Project.create(title: 'Street Football', creator: 'Jamil Warner', image: 'http://bit.ly/1x1WUNO', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: film_and_video.id)
 
