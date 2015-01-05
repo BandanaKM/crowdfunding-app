@@ -1,7 +1,10 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy, :pledge]
 
-  before_filter :authorize
+  # before_action :require_user
+
+  # before_action :require_admin, only: [:new, :create, :edit, :update, destroy]
+
   
   # GET /projects
   # GET /projects.json
