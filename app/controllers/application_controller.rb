@@ -18,6 +18,7 @@ class ApplicationController < ActionController::Base
       current_user.admin?
   end
 
+end
 
 # the way this method is actually written is:
 

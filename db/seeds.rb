@@ -34,9 +34,13 @@
 
  	Project.create(title: 'Holi Kela', creator: 'Roopa Krithi', image: 'http://bit.ly/13HLgeQ', description: "This is more information about the Holi Kela Kickstarter.", total: 10.00, goal: 1000.00, days: 11, subject_id: art.id)
 
- 	Project.create(title: 'African Sunset', creator: 'Dixie Reynolds', image: 'http://bit.ly/1A8XWXN', description: "This is more information about the African Sunset Kickstarter.", total: 1.00, goal: 100.00, days: 10, subject_id: art.id)
+ 	Project.create(title: 'Sunset', creator: 'Baako Uzoma', image: 'http://bit.ly/1A8XWXN', description: "This is more information about the Sunset Kickstarter.", total: 1.00, goal: 100.00, days: 10, subject_id: art.id)
 
- 	Project.create(title: 'Cherry Blossom Tree', creator: 'Alma Dean', image: 'http://bit.ly/1A8XXLu', description: "art_description1 art_description1 art_description1", total: 1.00, goal: 100.00, days: 10, subject_id: art.id)
+ 	#used the sunset projects
+
+ 	Project.create(title: 'Cherry Blossom Tree', creator: 'Alma Perez', image: 'http://bit.ly/1A8XXLu', description: "art_description1 art_description1 art_description1", total: 1.00, goal: 100.00, days: 10, subject_id: art.id)
+
+ 	#used cherry blossom in rails console exercise - replace 
 
 
  #comics
@@ -44,7 +48,7 @@
 
  	Project.create(title: 'Mystery Men', creator: 'Adelaide Cosgrove', image: 'http://bit.ly/1HfrzKc', description: "comics_description1 comics_description1 comics_description1", total: 100.00, goal: 10000.00, days: 12, subject_id: comics.id)
 
- 	Project.create(title: 'Fantomah', creator: 'Baako Uzoma', image: 'http://bit.ly/13HLmTE', description: "comics_description2 comics_description2 comics_description2", total: 200.00, goal: 100000.00, days: 13, subject_id: comics.id)
+ 	Project.create(title: 'Fantomah', creator: 'Dixie Reynolds', image: 'http://bit.ly/13HLmTE', description: "comics_description2 comics_description2 comics_description2", total: 200.00, goal: 100000.00, days: 13, subject_id: comics.id)
 
  	Project.create(title: 'Planet Comics', creator: 'Kent Chauncey', image: 'http://bit.ly/1zOr1dF', description: "comics_description2 comics_description2 comics_description2", total: 200.00, goal: 100000.00, days: 13, subject_id: comics.id)
 
