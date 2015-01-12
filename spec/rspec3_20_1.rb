@@ -11,7 +11,6 @@ describe SubjectsController, :type => :controller do
 
     it "renders subjects if user signed in" do
       user = User.new(name: 'david', password: '', password_confirmation: 'nomatch')
-      # allow_any_instance_of(ApplicationController).to receive(:signed_in?).and_return(true)
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       get :index
       expect(response).to render_template("index")
