@@ -1,3 +1,5 @@
+<%= render '/shared/header' %> 
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -19,6 +21,39 @@
   <strong>Description:</strong>
   <%= @project.description %>
 </p>
+
+<p>
+  <strong>Goal:</strong>
+  <%= @project.goal %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @project.total %>
+</p>
+
+<p>
+  <strong>Days:</strong>
+  <%= @project.days %>
+</p>
+
+
+<p>
+  <strong>Distance of time:</strong>
+  <% Time.now %>
+  <% Time.now + 4.days %>
+  <%= distance_of_time_in_words(Time.now, Time.now + 4.days) %>
+</p>
+
+
+
+<ul>
+  <% @project.rewards.each do |reward| %>
+  <li><a href='/projects/<%= @project.id %>/pledge?amount=<%= reward %>&current_user=<%= current_user.id %>'>Pledge <%= number_to_currency(reward) %></a></li>
+  <% end %>
+</ul>
+
+
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
@@ -54,8 +89,8 @@
     <div class="wrap">
       <div class="project-content">
         <div class="container">
-          <h1 class="title">Title goes here</h1>
-          <p class="author">by Author here</p> 
+          <h1 class="title"><%= @project.title %></h1>
+          <p class="author"><%= @project.creator %></p> 
           <div class="project-nav">
             <ul>
               <li class="active">Home</li>
@@ -64,15 +99,15 @@
           <div class="project-body">
             <div class="row">
               <div class="col-md-8">
-                <img class="img-responsive" src="http://placehold.it/722x541">
+                <img class="img-responsive" src=<%=@project.image %>>
                 <p class="subheading">Subheading goes here</p>
                 <h1>Title here</h1>
-                <p>Paragraph here</p>
+                <p><%= @project.description %></p>
               </div>
               <div class="col-md-4">
                 <div class="stats">
-                  <h4>$52,016</h4>
-                  <h5>pledged of $6,000 goal</h5>
+                  <h4>$52,016 <%= @project.total %></h4>
+                  <h5>pledged of $6,000 goal <%= @project.goal %></h5>
 
                   <h4>4</h4>
                   <h5>days to go</h5>
@@ -85,13 +120,38 @@
 
                 <div class="pledges">
                   <div class="pledge">
-                    <h5>Pledge $24 or more</h5>
+                    <h5>Pledge $1 or more</h5>
                     <p>Paragraph goes here</p>
                   </div>
                   <div class="pledge">
-                    <h5>Pledge $40 or more</h5>
+                    <h5>Pledge $10 or more</h5>
                     <p>Paragraph goes here</p>
                   </div>
+                  <div class="pledge">
+                    <h5>Pledge $25 or more</h5>
+                    <p>Paragraph goes here</p>
+                  </div>
+                  <div class="pledge">
+                    <h5>Pledge $50 or more</h5>
+                    <p>Paragraph goes here</p>
+                  </div>
+                  <div class="pledge">
+                    <h5>Pledge $100 or more</h5>
+                    <p>Paragraph goes here</p>
+                  </div>
+                  <div class="pledge">
+                    <h5>Pledge $250 or more</h5>
+                    <p>Paragraph goes here</p>
+                  </div>
+                  <div class="pledge">
+                    <h5>Pledge $500 or more</h5>
+                    <p>Paragraph goes here</p>
+                  </div>
+                  <div class="pledge">
+                    <h5>Pledge $1000 or more</h5>
+                    <p>Paragraph goes here</p>
+                  </div>
+
                 </div>
 
                 <div class="funding-period">
@@ -103,7 +163,7 @@
       </div>
     </div>
             
-    <div class="footer">
+<!--     <div class="footer">
       <div class="container">
         <div class="links row">
           <div class="col-sm-3">
@@ -170,3 +230,7 @@
     </div>
   </body>
 </html>
+
+ -->
+
+<%= render '/shared/footer' %> 

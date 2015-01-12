@@ -1,8 +1,11 @@
 class ProjectsController < ApplicationController
-  before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :set_project, only: [:show, :edit, :update, :destroy, :pledge]
 
-  # before_filter :authorize
-  
+  # before_action :require_user
+
+  # before_action :require_admin, only: [:new, :create, :edit, :update, destroy]
+
+
   # GET /projects
   # GET /projects.json
   def index
@@ -62,6 +65,17 @@ class ProjectsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def pledge
+    @project.pledges.build(amount: params[:amount], user_id: params[:current_user])
+    @project.total = @project.pledges.to_a.sum(&:amount)
+
+    # look at apidock.com rails enumerable sum - saves each pledges amount
+    @project.save
+    redirect_to(@project)
+  end
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
