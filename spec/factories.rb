@@ -19,12 +19,11 @@ FactoryGirl.define do
 
   factory :project do
     subject
-    # name  {"project_#{rand(1000).to_s}" }
-    # title {"project_#{rand(1000).to_s}" }
-    # creator {[FactoryGirl.create(:user)]}
-    # image "www.fake.com"
-    # description "whatever"
-    # total 0
-    # goal 5000
+    title {"project_#{rand(1000).to_s}" }
+    creator {[FactoryGirl.create(:user)]}
+    image "www.fake.com"
+    description "whatever"
+    total 0
+    goal 5000
   end
 end
