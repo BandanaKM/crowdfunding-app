@@ -41,11 +41,20 @@
 <p>
   <strong>Distance of time:</strong>
   <% Time.now %>
-  <% Time.now + 4.days %>
-  <%= distance_of_time_in_words(Time.now, Time.now + 4.days) %>
+  <% Time.now + 30.days %>
+  <%= distance_of_time_in_words_to_now(Time.now + 25.days) %>
 </p>
 
 
+<p>
+  <strong>Distance of time test:</strong>
+  <%= distance_of_time_in_words_to_now(Time.now + @end_date.days) %>
+</p>
+
+
+<!--   <% Time.now %>
+  <% Time.now + 30.days %>
+ -->
 
 <ul>
   <% @project.rewards.each do |reward| %>

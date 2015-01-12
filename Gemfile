@@ -36,7 +36,7 @@ gem 'bcrypt', '~> 3.1.7'
 # temp commented out
 # gem 'rspec', '3.1'
 # gem 'rspec-rails'
-gem 'rspec-collection_matchers'
+# gem 'rspec-collection_matchers'
 # gem 'rspec-context-private', '0.0.1'
 # gem 'rspec-html-matchers', '0.6.1'
 

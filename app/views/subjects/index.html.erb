@@ -28,7 +28,9 @@
 
 <%= link_to 'New Subject', new_subject_path %>
 
-<!doctype html>
+
+
+<!-- <!doctype html>
 <html>
   <head>
     <link href="css/bootstrap.css" rel='stylesheet'>
@@ -53,7 +55,7 @@
           </ul>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="subjects">
       <div class="container">
@@ -61,92 +63,18 @@
         <p>15 diverse categories. Thousands of amazing projects.</p>
 
         <div class="row">
-          <div class="col-md-1"></div>
-          <div class="col-md-2">
-            <a href="#" class="thumbnail">
-              <h3>Art</h3>
-            </a>
-          </div>
-          <div class="col-md-2">
-            <a href="#" class="thumbnail">
-              <h3>Comics</h3>
-            </a>
-          </div>
-          <div class="col-md-2">
-            <a href="#" class="thumbnail">
-              <h3>Crafts</h3>
-            </a>
-          </div>
-          <div class="col-md-2">
-            <a href="#" class="thumbnail">
-              <h3>Dance</h3>
-            </a>
-          </div>
-          <div class="col-md-2">
-            <a href="#" class="thumbnail">
-              <h3>Design</h3>
-            </a>
-          </div>
-          <div class="col-md-1"></div>
-        </div>
-        <div class="row">
-          <div class="col-md-1"></div>
-          <div class="col-md-2">
-            <a href="#" class="thumbnail">
-              <h3>Fashion</h3>
-            </a>
-          </div>
-          <div class="col-md-2">
-            <a href="#" class="thumbnail">
-              <h3>Film &amp; Video</h3>
-            </a>
-          </div>
-          <div class="col-md-2">
-            <a href="#" class="thumbnail">
-              <h3>Food</h3>
-            </a>
-          </div>
-          <div class="col-md-2">
-            <a href="#" class="thumbnail">
-              <h3>Games</h3>
-            </a>
-          </div>
-          <div class="col-md-2">
-            <a href="#" class="thumbnail">
-              <h3>Journalism</h3>
-            </a>
-          </div>
-          <div class="col-md-1"></div>
-        </div>
-        <div class="row">
-          <div class="col-md-1"></div>
-          <div class="col-md-2">
-            <a href="#" class="thumbnail">
-              <h3>Music</h3>
-            </a>
-          </div>
-          <div class="col-md-2">
-            <a href="#" class="thumbnail">
-              <h3>Photography</h3>
-            </a>
-          </div>
-          <div class="col-md-2">
-            <a href="#" class="thumbnail">
-              <h3>Publishing</h3>
-            </a>
-          </div>
-          <div class="col-md-2">
-            <a href="#" class="thumbnail">
-              <h3>Technology</h3>
-            </a>
-          </div>
-          <div class="col-md-2">
-            <a href="#" class="thumbnail">
-              <h3>Theater</h3>
-            </a>
-          </div>
-          <div class="col-md-1"></div>
-        </div>
+          <% @subjects.in_groups_of(5).each do |subject_group| %>
+            <div class="row">
+            <% subject_group.each do |subject| %>
+              <div class="col-md-2">
+                <%= link_to(subject, {class: "thumbnail"}) do %>
+                  <h3><%= subject.name %></h3>
+                <% end %>
+              </div>
+            <% end %>
+            </div>
+          <% end %>
+          
       </div>
     </div>
 
