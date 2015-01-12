@@ -46,6 +46,7 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.4.1'
   gem 'rspec-collection_matchers'
   gem 'byebug'
+  gem 'pry'
 end
 
 group :test do

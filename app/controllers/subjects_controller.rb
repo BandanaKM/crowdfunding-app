@@ -1,7 +1,7 @@
 class SubjectsController < ApplicationController
   before_action :set_subject, only: [:show, :edit, :update, :destroy]
 
-  # before_action :require_user
+  before_action :require_user
 
   # before_action :require_admin, only: [:new, :create, :edit, :update, destroy]
 
