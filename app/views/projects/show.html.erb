@@ -94,22 +94,23 @@
           <div class="project-nav">
             <ul>
               <li class="active">Home</li>
-              <li>Comments <span class="label label-default">7</span></li>
+              <li>Comments <span class="label label-default"></span></li>
           </div>
           <div class="project-body">
             <div class="row">
               <div class="col-md-8">
                 <img class="img-responsive" src=<%=@project.image %>>
-                <p class="subheading">Subheading goes here</p>
-                <h1>Title here</h1>
+                <p class="subheading"></p>
+                <h1> Title goes here </h1>
                 <p><%= @project.description %></p>
               </div>
               <div class="col-md-4">
                 <div class="stats">
-                  <h4>$52,016 <%= @project.total %></h4>
-                  <h5>pledged of $6,000 goal <%= @project.goal %></h5>
-
-                  <h4>4</h4>
+                  <h1><%= number_to_currency(@project.total) %></h1>
+                  <h5>pledged of <h5> 
+                  <h1> <%= number_to_currency(@project.goal) %></h1>
+                  <h5>goal<h5> 
+                  <h1>4</h1>
                   <h5>days to go</h5>
 
                   <a class="btn btn-kickstarter">
@@ -119,10 +120,6 @@
                 </div>
 
                 <div class="pledges">
-                  <div class="pledge">
-                    <h5>Pledge $1 or more</h5>
-                    <p>Paragraph goes here</p>
-                  </div>
                   <div class="pledge">
                     <h5>Pledge $10 or more</h5>
                     <p>Paragraph goes here</p>
@@ -154,10 +151,10 @@
 
                 </div>
 
-                <div class="funding-period">
+<!--                 <div class="funding-period">
                   <h5>Funding period</h5>
                   <p>Nov 20 2014 - Dec 19 2014 (29 days)</p>
-                </div>
+                </div> -->
             </div>
           </div>
       </div>
