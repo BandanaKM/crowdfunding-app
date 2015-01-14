@@ -61,23 +61,6 @@
                   <h5>pledged of <h5>
                   <h1> <%= number_to_currency(@project.goal) %></h1>
                   <h5>goal<h5>
-                  <h1>4</h1>
-                  <h5>days to go</h5>
-                  <% pledges = @project.rewards %>
-                  <% min_pledge = pledges.shift %>
-                  <%= link_to(pledge_project_path(@project, amount: min_pledge), class: "btn btn-kickstarter") do %>
-                    Back this project
-                    <span>$1 minimum pledge</span>
-                  <% end %>
-                </div>
-
-                <div class="pledges">
-                  <% pledges.each do |pledge| %>
-                    <br>
-                    <%= link_to(pledge_project_path(@project, amount: pledge), class: "btn pledge") do %>
-                      <h5>Pledge $<%= pledge %> or more</h5>
-                    <% end %>
-                  <% end %>
                 </div>
             </div>
           </div>
