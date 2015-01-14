@@ -19,9 +19,32 @@
         </div>
         <div class="pull-right">
           <ul>
-            <li><a href="#">Sign up</a></li>
-            <li><a href="#">Log in</a></li>
+          <% if current_user %>
+          Signed in as <strong> <%= current_user.name %></strong>
+          </ul>
+          <ul> 
+            <li><%= link_to "Logout", '/logout' %></a></li>
+          </ul>
+          <% else %> 
+          <ul>
+            <li><%= link_to "Login", '/login' %></a></li>
+            <li><%= link_to "Signup", '/signup' %></a></li>
+          <% end %> 
           </ul>
         </div>
       </div>
     </div>
+
+
+
+
+<!-- 
+
+            <div class="pull-right">
+          <ul>
+            <li><a href="">Sign up</a></li>
+            <li><a href="#">Log in</a></li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
