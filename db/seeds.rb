@@ -40,7 +40,7 @@
 
  	Project.create(title: 'Cherry Blossom Tree', creator: 'Alma Perez', image: 'http://bit.ly/1A8XXLu', description: "art_description1 art_description1 art_description1", total: 1.00, goal: 100.00, days: 10, subject_id: art.id)
 
- 	#used cherry blossom in rails console exercise - replace 
+ 	#used cherry blossom in rails console exercise - replace
 
 
  #comics
@@ -106,14 +106,14 @@
 
  	Project.create(title: 'Street Art', creator: 'Tyler Waters', image: 'http://bit.ly/1AgFH45', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: film_and_video.id)
 
- 	Project.create(title: 'Persian Miniatures', creator: 'Niranjan Kaur', image: 'http://bit.ly/1ry3hHP', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: film_and_video.id
+ 	Project.create(title: 'Persian Miniatures', creator: 'Niranjan Kaur', image: 'http://bit.ly/1ry3hHP', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: film_and_video.id)
 
  	Project.create(title: 'Street Football', creator: 'Jamil Warner', image: 'http://bit.ly/1x1WUNO', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: film_and_video.id)
 
 
 
 # food
-	
+
  	Project.create(title: 'Dance4', creator: 'Mica Wendel', image: 'http://bit.ly/1Blj0tE', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: food.id)
 
 
@@ -128,7 +128,7 @@
 
 # games
 
-	
+
  	Project.create(title: 'Ausomenauts', creator: 'Jamie Goodwin', image: 'http://bit.ly/1K0nbRC', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: games.id)
 
 
@@ -187,7 +187,7 @@
  	Project.create(title: 'Nature Photography', creator: 'Jaakko Vähälä', image: 'http://bit.ly/1vEQqzO', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
 
 
-# publishing 
+# publishing
 
 
 	Project.create(title: 'World Calligraphy', creator: 'Nazar Singh', image: 'http://bit.ly/1y4E5Lh', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
@@ -218,7 +218,7 @@
 
 
 
-# theater 
+# theater
 
 
 	Project.create(title: 'Kultars Mime', creator: 'Gabriel Friedman', image: 'http://bit.ly/1Bljy2v', description: "dance_description2 dance_description2 dance_description2", total: 600.00, goal: 500000.00, days: 17, subject_id: journalism.id)
