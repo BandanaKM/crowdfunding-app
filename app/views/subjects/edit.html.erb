@@ -1,27 +1,54 @@
 <%= render '/shared/header' %> 
 
+<!-- Header -->
+
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel='stylesheet'>
+    <link href="css/style.css" rel='stylesheet'>
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="col-md-2">
+          <img src="img/logo.png" width="161px">
+        </div>
+        <div class="col-md-3">
+          <ul class="primary">
+            <li>Discover</li>
+            <li>Start</li>
+          </ul>
+        </div>
+        <div class="pull-right">
+          <ul>
+          <% if current_user %>
+          Signed in as <strong> <%= current_user.name %></strong>
+          </ul>
+          <ul> 
+            <li><%= link_to "Logout", '/logout' %></a></li>
+          </ul>
+          <% else %> 
+          <ul>
+            <li><%= link_to "Login", '/login' %></a></li>
+            <li><%= link_to "Signup", '/signup' %></a></li>
+          <% end %> 
+          </ul>
+        </div>
+      </div>
+    </div>
+
+<!-- Header -->
+
+
 <br>
 <br>
 
-<!-- <div class="container"> 
-    <div class="row">
-      <div class="col-md-12 text-left"> -->
-      <h1>Edit Subject</h1>
-<!--       </div> -->
+<h1>Edit Subject</h1>
 
-<!-- 	<div class="row">
-	  <div class="col-md-12 text-left"> -->
-	    <%= render 'form' %>
-<!-- 	  </div>
-	</div> -->
+<%= render 'form' %>
 
-<!-- 	<div class="row">
-	  <div class="col-md-12 text-left"> -->
-	  <%= link_to 'Show', @subject, :class => "btn btn-kickstarter btn-sm" %>
-	  <%= link_to 'Back', subjects_path, :class => "btn btn-kickstarter btn-sm" %>
-<!-- 	</div>
-	</div>
-</div> -->
+<%= link_to 'Show', @subject, :class => "btn btn-kickstarter btn-sm" %>
+<%= link_to 'Back', subjects_path, :class => "btn btn-kickstarter btn-sm" %>
 
 <br>
 <br>

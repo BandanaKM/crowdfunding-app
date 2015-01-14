@@ -1,10 +1,123 @@
 <%= render '/shared/header' %> 
 
+
+<!-- Header -->
+
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel='stylesheet'>
+    <link href="css/style.css" rel='stylesheet'>
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="col-md-2">
+          <img src="img/logo.png" width="161px">
+        </div>
+        <div class="col-md-3">
+          <ul class="primary">
+            <li>Discover</li>
+            <li>Start</li>
+          </ul>
+        </div>
+        <div class="pull-right">
+          <ul>
+          <% if current_user %>
+          Signed in as <strong> <%= current_user.name %></strong>
+          </ul>
+          <ul> 
+            <li><%= link_to "Logout", '/logout' %></a></li>
+          </ul>
+          <% else %> 
+          <ul>
+            <li><%= link_to "Login", '/login' %></a></li>
+            <li><%= link_to "Signup", '/signup' %></a></li>
+          <% end %> 
+          </ul>
+        </div>
+      </div>
+    </div>
+
+<!-- Header -->
+
 <h1>New Project</h1>
 
 <%= render 'form' %>
 
 <%= link_to 'Back', projects_path %>
+
+
+
+<!-- Footer -->
+
+    <div class="footer">
+      <div class="container">
+        <div class="links row">
+          <div class="col-sm-3">
+            <h5>About us</h5>
+            <ul>
+              <li>What is Kickstarter?</li>
+              <li>2013 highlights</li>
+              <li>Who we are</li>
+              <li>Jobs</li>
+              <li>Press</li>
+              <li>Stats</li>
+              <li>Projects we love</li>
+            </ul>
+          </div>
+          <div class="col-sm-5">
+            <h5>Discover</h5>
+            <div class="row">
+              <div class="col-xs-6">
+                <ul>
+                  <li>Art</li>
+                  <li>Comics</li>
+                  <li>Crafts</li>
+                  <li>Dance</li>
+                  <li>Design</li>
+                  <li>Fashion</li>
+                  <li>Film &amp; Video</li>
+                  <li>Food</li>
+                </ul>
+              </div>
+              <div class="col-xs-6">
+                <ul>
+                  <li>Games</li>
+                  <li>Journalism</li>
+                  <li>Music</li>
+                  <li>Photography</li>
+                  <li>Publishing</li>
+                  <li>Technology</li>
+                  <li>Theater</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <h5>Hello</h5>
+            <ul>
+              <li>Twitter</li>
+              <li>Facebook</li>
+              <li>Tumblr</li>
+              <li>Instagram</li>
+              <li>Vine</li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom row">
+          <div class="col-md-2">
+            <img src="img/logo-grey.png" width="161px">
+          </div>
+          <div class="pull-right">
+            <p>&copy; 2014 Kickstarter, Inc</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- Footer -->
 
 
 

@@ -1,5 +1,46 @@
 <%= render '/shared/header' %> 
 
+
+<!-- Header -->
+
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel='stylesheet'>
+    <link href="css/style.css" rel='stylesheet'>
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="col-md-2">
+          <img src="img/logo.png" width="161px">
+        </div>
+        <div class="col-md-3">
+          <ul class="primary">
+            <li>Discover</li>
+            <li>Start</li>
+          </ul>
+        </div>
+        <div class="pull-right">
+          <ul>
+          <% if current_user %>
+          Signed in as <strong> <%= current_user.name %></strong>
+          </ul>
+          <ul> 
+            <li><%= link_to "Logout", '/logout' %></a></li>
+          </ul>
+          <% else %> 
+          <ul>
+            <li><%= link_to "Login", '/login' %></a></li>
+            <li><%= link_to "Signup", '/signup' %></a></li>
+          <% end %> 
+          </ul>
+        </div>
+      </div>
+    </div>
+
+<!-- Header -->
+
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -34,7 +75,7 @@
 
 
 <p>
-  <strong>Distance of time:</strong>
+  <strong>Days</strong>
   <% Time.now %>
   <% Time.now + 30.days %>
   <%= distance_of_time_in_words(Time.now, Time.now + 30.days) %>
@@ -144,17 +185,14 @@
                   </div>
 
                 </div>
-
-<!--                 <div class="funding-period">
-                  <h5>Funding period</h5>
-                  <p>Nov 20 2014 - Dec 19 2014 (29 days)</p>
-                </div> -->
             </div>
           </div>
       </div>
     </div>
             
-<!--     <div class="footer">
+<!-- Footer -->
+
+    <div class="footer">
       <div class="container">
         <div class="links row">
           <div class="col-sm-3">
@@ -179,7 +217,6 @@
                   <li>Crafts</li>
                   <li>Dance</li>
                   <li>Design</li>
-                  <li>Fashion</li>
                   <li>Fashion</li>
                   <li>Film &amp; Video</li>
                   <li>Food</li>
@@ -222,6 +259,7 @@
   </body>
 </html>
 
- -->
+<!-- Footer -->
+
 
 <%= render '/shared/footer' %> 
