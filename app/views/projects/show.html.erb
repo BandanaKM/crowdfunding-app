@@ -1,4 +1,4 @@
-<%= render '/shared/header' %> 
+<%= render '/shared/header' %>
 
 <p id="notice"><%= notice %></p>
 
@@ -63,7 +63,7 @@
     <div class="header">
       <div class="container">
         <div class="col-md-2">
-          <img src="img/logo.png" width="161px">
+          <%= image_tag "logo.png", size: "161x20" %>
         </div>
         <div class="col-md-3">
           <ul class="primary">
@@ -84,7 +84,7 @@
       <div class="project-content">
         <div class="container">
           <h1 class="title"><%= @project.title %></h1>
-          <p class="author"><%= @project.creator %></p> 
+          <p class="author"><%= @project.creator %></p>
           <div class="project-nav">
             <ul>
               <li class="active">Home</li>
@@ -95,65 +95,38 @@
               <div class="col-md-8">
                 <img class="img-responsive" src=<%=@project.image %>>
                 <p class="subheading"></p>
-                <h1> Title goes here </h1>
+                <h1> <%= @project.title %> </h1>
                 <p><%= @project.description %></p>
               </div>
               <div class="col-md-4">
                 <div class="stats">
                   <h1><%= number_to_currency(@project.total) %></h1>
-                  <h5>pledged of <h5> 
+                  <h5>pledged of <h5>
                   <h1> <%= number_to_currency(@project.goal) %></h1>
-                  <h5>goal<h5> 
+                  <h5>goal<h5>
                   <h1>4</h1>
                   <h5>days to go</h5>
-
-                  <a class="btn btn-kickstarter">
+                  <% pledges = @project.rewards %>
+                  <% min_pledge = pledges.shift %>
+                  <%= link_to(pledge_project_path(@project, amount: min_pledge), class: "btn btn-kickstarter") do %>
                     Back this project
                     <span>$1 minimum pledge</span>
-                  </a>
+                  <% end %>
                 </div>
 
                 <div class="pledges">
-                  <div class="pledge">
-                    <h5>Pledge $10 or more</h5>
-                    <p>Paragraph goes here</p>
-                  </div>
-                  <div class="pledge">
-                    <h5>Pledge $25 or more</h5>
-                    <p>Paragraph goes here</p>
-                  </div>
-                  <div class="pledge">
-                    <h5>Pledge $50 or more</h5>
-                    <p>Paragraph goes here</p>
-                  </div>
-                  <div class="pledge">
-                    <h5>Pledge $100 or more</h5>
-                    <p>Paragraph goes here</p>
-                  </div>
-                  <div class="pledge">
-                    <h5>Pledge $250 or more</h5>
-                    <p>Paragraph goes here</p>
-                  </div>
-                  <div class="pledge">
-                    <h5>Pledge $500 or more</h5>
-                    <p>Paragraph goes here</p>
-                  </div>
-                  <div class="pledge">
-                    <h5>Pledge $1000 or more</h5>
-                    <p>Paragraph goes here</p>
-                  </div>
-
+                  <% pledges.each do |pledge| %>
+                    <br>
+                    <%= link_to(pledge_project_path(@project, amount: pledge), class: "btn pledge") do %>
+                      <h5>Pledge $<%= pledge %> or more</h5>
+                    <% end %>
+                  <% end %>
                 </div>
-
-<!--                 <div class="funding-period">
-                  <h5>Funding period</h5>
-                  <p>Nov 20 2014 - Dec 19 2014 (29 days)</p>
-                </div> -->
             </div>
           </div>
       </div>
     </div>
-            
+
 <!--     <div class="footer">
       <div class="container">
         <div class="links row">
@@ -211,10 +184,10 @@
         </div>
         <div class="bottom row">
           <div class="col-md-2">
-            <img src="img/logo-grey.png" width="161px">
+            <%= image_tag "logo-grey.png", size: "161x20" %>
           </div>
           <div class="pull-right">
-            <p>&copy; 2014 Kickstarter, Inc</p>
+            <p>&copy; 2015 Kickstarter, Inc</p>
           </div>
         </div>
       </div>
@@ -224,4 +197,4 @@
 
  -->
 
-<%= render '/shared/footer' %> 
+<%= render '/shared/footer' %>

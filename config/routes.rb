@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
-  
+
   get 'welcome/home'
 
   root to: 'welcome#home'
 
   resources :projects do
-    member do 
-      post :pledge
+    member do
+      get :pledge
     end
-  end 
+  end
 
   resources :subjects
 
