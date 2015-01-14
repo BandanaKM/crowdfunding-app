@@ -49,6 +49,7 @@ class ProjectsController < ApplicationController
 
 
   def pledge
+    @project = Project.find(params[:id])
     @project.pledges.build(amount: params[:amount], user_id: params[:current_user])
     @project.total = @project.pledges.to_a.sum(&:amount)
     @project.save

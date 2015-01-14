@@ -474,8 +474,14 @@ a {
   margin-top: 20px;
 }
 
+
 .project-content .pledge {
   padding: 10px;
+}
+
+.project-content .pledge:hover {
+  text-decoration:none;
+  background-color: #f7fafa;
 }
 
 .project-content .pledge + .pledge {
