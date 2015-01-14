@@ -19,17 +19,3 @@ class ApplicationController < ActionController::Base
   end
 
 end
-
-# the way this method is actually written is:
-
-#   def require_admin
-#     if !logged_in? || !current.admin?
-#       redirect_to '/'
-#   end 
-
-# end
-
-
-#   # def logged_in?
-#   #   !!current_user
-#   # end 

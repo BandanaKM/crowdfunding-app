@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20141205035908) do
 
   create_table "pledges", force: true do |t|
-    t.float    "amount"
+    t.integer  "amount"
     t.integer  "project_id"
     t.integer  "user_id"
     t.datetime "created_at", null: false
@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 20141205035908) do
     t.integer  "subject_id"
     t.integer  "total"
     t.integer  "goal"
-    t.integer  "days"
   end
 
   add_index "projects", ["subject_id"], name: "index_projects_on_subject_id"
