@@ -4,13 +4,6 @@ class ProjectsController < ApplicationController
 
   # before_action :require_admin, only: [:new, :create, :edit, :update, destroy]
 
-<<<<<<< HEAD
-
-  # GET /projects
-  # GET /projects.json
-=======
-
->>>>>>> 9732b1d75d314f21ea480a570385196f09a094ce
   def index
     @projects = Project.all
   end

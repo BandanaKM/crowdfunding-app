@@ -1,4 +1,4 @@
-<%= render '/shared/header' %> 
+<%= render '/shared/header' %>
 
 <p id="notice"><%= notice %></p>
 
@@ -84,7 +84,7 @@
       <div class="project-content">
         <div class="container">
           <h1 class="title"><%= @project.title %></h1>
-          <p class="author"><%= @project.creator %></p> 
+          <p class="author"><%= @project.creator %></p>
           <div class="project-nav">
             <ul>
               <li class="active">Home</li>
@@ -101,9 +101,9 @@
               <div class="col-md-4">
                 <div class="stats">
                   <h1><%= number_to_currency(@project.total) %></h1>
-                  <h5>pledged of <h5> 
+                  <h5>pledged of <h5>
                   <h1> <%= number_to_currency(@project.goal) %></h1>
-                  <h5>goal<h5> 
+                  <h5>goal<h5>
                   <h1>4</h1>
                   <h5>days to go</h5>
 
@@ -144,16 +144,11 @@
                   </div>
 
                 </div>
-
-<!--                 <div class="funding-period">
-                  <h5>Funding period</h5>
-                  <p>Nov 20 2014 - Dec 19 2014 (29 days)</p>
-                </div> -->
             </div>
           </div>
       </div>
     </div>
-            
+
 <!--     <div class="footer">
       <div class="container">
         <div class="links row">
@@ -224,4 +219,4 @@
 
  -->
 
-<%= render '/shared/footer' %> 
+<%= render '/shared/footer' %>
