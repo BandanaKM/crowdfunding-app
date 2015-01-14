@@ -9,13 +9,6 @@
 <body>
 
 
-<% if current_user %>
-Signed in as <strong> <%= current_user.name %><strong>
-<%= link_to "Logout", '/logout' %>
-<% else %>
-  <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
-<% end %>
-
 <%= yield %>
 
 </body>

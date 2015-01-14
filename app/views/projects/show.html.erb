@@ -32,19 +32,13 @@
   <%= @project.total %>
 </p>
 
-<p>
-  <strong>Days:</strong>
-  <%= @project.days %>
-</p>
-
 
 <p>
   <strong>Distance of time:</strong>
   <% Time.now %>
-  <% Time.now + 4.days %>
-  <%= distance_of_time_in_words(Time.now, Time.now + 4.days) %>
+  <% Time.now + 30.days %>
+  <%= distance_of_time_in_words(Time.now, Time.now + 30.days) %>
 </p>
-
 
 
 <ul>

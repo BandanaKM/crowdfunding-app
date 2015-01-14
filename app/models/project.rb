@@ -11,7 +11,7 @@ class Project < ActiveRecord::Base
   # validates :image, presence: true
   # validates :description, presence: true, length: { maximum: 500 }
   # validates :total, presence: true, numericality: true
-  # validates :goal, presence: true, numericality: {only_integer: true}
+  # validates :goal, presence: true, numericality: true 
 
   def rewards
   	@rewards = [1,10,25,50,100,250,500,1000]
