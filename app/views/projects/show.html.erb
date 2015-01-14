@@ -1,59 +1,5 @@
-<%= render '/shared/header' %>
+<!-- Header -->
 
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
-
-<p>
-  <strong>Creator:</strong>
-  <%= @project.creator %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @project.image %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
-
-<p>
-  <strong>Goal:</strong>
-  <%= @project.goal %>
-</p>
-
-<p>
-  <strong>Total:</strong>
-  <%= @project.total %>
-</p>
-
-
-<p>
-  <strong>Distance of time:</strong>
-  <% Time.now %>
-  <% Time.now + 30.days %>
-  <%= distance_of_time_in_words(Time.now, Time.now + 30.days) %>
-</p>
-
-
-<ul>
-  <% @project.rewards.each do |reward| %>
-  <li><a href='/projects/<%= @project.id %>/pledge?amount=<%= reward %>&current_user=<%= current_user.id %>'>Pledge <%= number_to_currency(reward) %></a></li>
-  <% end %>
-</ul>
-
-
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
-
-
-<!doctype html>
 <html>
   <head>
     <link href="css/bootstrap.css" rel='stylesheet'>
@@ -73,12 +19,23 @@
         </div>
         <div class="pull-right">
           <ul>
-            <li><a href="#">Sign up</a></li>
-            <li><a href="#">Log in</a></li>
+          <% if current_user %>
+          Signed in as <strong> <%= current_user.name %></strong>
+          </ul>
+          <ul>
+            <li><%= link_to "Logout", '/logout' %></a></li>
+          </ul>
+          <% else %>
+          <ul>
+            <li><%= link_to "Login", '/login' %></a></li>
+            <li><%= link_to "Signup", '/signup' %></a></li>
+          <% end %>
           </ul>
         </div>
       </div>
     </div>
+
+<!-- Header -->
 
     <div class="wrap">
       <div class="project-content">
@@ -127,7 +84,10 @@
       </div>
     </div>
 
-<!--     <div class="footer">
+
+<!-- Footer -->
+
+    <div class="footer">
       <div class="container">
         <div class="links row">
           <div class="col-sm-3">
@@ -152,7 +112,6 @@
                   <li>Crafts</li>
                   <li>Dance</li>
                   <li>Design</li>
-                  <li>Fashion</li>
                   <li>Fashion</li>
                   <li>Film &amp; Video</li>
                   <li>Food</li>
@@ -194,7 +153,3 @@
     </div>
   </body>
 </html>
-
- -->
-
-<%= render '/shared/footer' %>
