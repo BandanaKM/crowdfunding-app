@@ -10,7 +10,7 @@
     <div class="header">
       <div class="container">
         <div class="col-md-2">
-          <img src="img/logo.png" width="161px">
+          <%= image_tag "logo.png", size: "161x20" %>
         </div>
         <div class="col-md-3">
           <ul class="primary">
@@ -23,24 +23,21 @@
           <% if current_user %>
           Signed in as <strong> <%= current_user.name %></strong>
           </ul>
-          <ul> 
+          <ul>
             <li><%= link_to "Logout", '/logout' %></a></li>
           </ul>
-          <% else %> 
+          <% else %>
           <ul>
             <li><%= link_to "Login", '/login' %></a></li>
             <li><%= link_to "Signup", '/signup' %></a></li>
-          <% end %> 
+          <% end %>
           </ul>
         </div>
       </div>
     </div>
 
     <div class="jumbotron">
-      <video autoplay muted loop> 
-        <source src="home.jpg" type="video/mp4"></source>
-        <img src="home.jpg">
-      </video>
+      <%= image_tag "home.jpg" %>
       <div class="container content">
         <h1>Bring creative projects to life</h1>
         <a href="#" class="btn btn-kickstarter">Learn more</a>
@@ -77,7 +74,7 @@
                   <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
                     <span class="sr-only">40% Complete (success)</span>
                   </div>
-                </div>                
+                </div>
               </div>
 
               <div class="col-xs-1">
@@ -128,7 +125,7 @@
       <div class="container">
         <h2>What's Popular</h2>
         <div class="row">
-          
+
           <div class="col-sm-4">
             <div class="thumbnail">
               <img src="http://bit.ly/1tiq9Xi">
@@ -136,12 +133,12 @@
                 <h3 class="title">Title goes here</h3>
                 <p class="author">by Author Here</p>
                 <p class="description">Description goes here</p>
-                
+
                 <div class="progress">
                   <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
                     <span class="sr-only">40% Complete (success)</span>
                   </div>
-                </div> 
+                </div>
 
                 <div class="row">
                   <div class="col-xs-3">
@@ -155,7 +152,7 @@
                   <div class="col-xs-3">
                     <h4>11</h4>
                     <h5>days to go</h5>
-                  </div>                
+                  </div>
                 </div>
               </div>
             </div>
@@ -168,12 +165,12 @@
                 <h3 class="title">Title goes here</h3>
                 <p class="author">by Author Here</p>
                 <p class="description">Description goes here</p>
-                
+
                 <div class="progress">
                   <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
                     <span class="sr-only">40% Complete (success)</span>
                   </div>
-                </div> 
+                </div>
 
                 <div class="row">
                   <div class="col-xs-3">
@@ -187,7 +184,7 @@
                   <div class="col-xs-3">
                     <h4>11</h4>
                     <h5>days to go</h5>
-                  </div>                
+                  </div>
                 </div>
               </div>
             </div>
@@ -200,12 +197,12 @@
                 <h3 class="title">Title goes here</h3>
                 <p class="author">by Author Here</p>
                 <p class="description">Description goes here</p>
-                
+
                 <div class="progress">
                   <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
                     <span class="sr-only">40% Complete (success)</span>
                   </div>
-                </div> 
+                </div>
 
                 <div class="row">
                   <div class="col-xs-3">
@@ -219,7 +216,7 @@
                   <div class="col-xs-3">
                     <h4>11</h4>
                     <h5>days to go</h5>
-                  </div>                
+                  </div>
                 </div>
               </div>
             </div>
@@ -297,11 +294,10 @@
         </div>
         <div class="bottom row">
           <div class="col-md-2">
-            <img src="https://www.kickstarter.com/download/kickstarter-logo-light.png" width="161px">
-<!--             <img src="image/logo-grey.png" width="161px">
- -->          </div>
+            <%= image_tag "logo-grey.png", size: "161x20" %>
+          </div>
           <div class="pull-right">
-            <p>&copy; 2014 Kickstarter, Inc</p>
+            <p>&copy; 2015 Kickstarter, Inc</p>
           </div>
         </div>
       </div>
