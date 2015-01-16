@@ -1,28 +1,5 @@
 <%= render '/shared/header' %> 
 
-<p id="notice"><%= notice %></p>
-
-<br>
-<br>
-
-<h1>Show Subject</h1>
-
-<p>
-  <strong>Name:</strong>
-  <%= @subject.name %>
-</p>
-
-<%= link_to 'Edit', edit_subject_path(@subject), :class => "btn btn-kickstarter" %> 
-<%= link_to 'Back', subjects_path, :class => "btn btn-kickstarter" %>
-
-<br>
-<br>
-<br>
-<br>
-
-
-<!-- Project Index Page -->
-
 
 <h1><%= @subject.name %></h1>
   <% @projects = @projects.to_a %>

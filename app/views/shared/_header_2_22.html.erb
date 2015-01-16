@@ -18,6 +18,19 @@
           </ul>
         </div>
         <div class="pull-right">
+          <ul>
+          <% # check if there's a current user %>
+          Signed in as <strong> <%= # display the current user's name %></strong>
+          </ul>
+          <ul>
+            <li><%= link_to "Logout", '/logout' %></a></li>
+          </ul>
+          <% # else %>
+          <ul>
+            <li><%= link_to "Login", '/login' %></a></li>
+            <li><%= link_to "Signup", '/signup' %></a></li>
+          <% # end %>
+          </ul>
         </div>
       </div>
     </div>
