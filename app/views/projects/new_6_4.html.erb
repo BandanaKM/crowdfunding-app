@@ -19,20 +19,31 @@
         </div>
         <div class="pull-right">
           <ul>
-          <% # check if there's a current user %>
-          Signed in as <strong> <%= # display the current user's name %></strong>
+          <% if current_user %>
+          Signed in as <strong> <%= current_user.name %></strong>
           </ul>
           <ul>
             <li><%= link_to "Logout", '/logout' %></a></li>
           </ul>
-          <% # else %>
+          <% else %>
           <ul>
             <li><%= link_to "Login", '/login' %></a></li>
             <li><%= link_to "Signup", '/signup' %></a></li>
-          <% # end %>
+          <% end %>
           </ul>
         </div>
       </div>
     </div>
 
 <!-- End Header --> 
+
+
+<h1>New Project</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', projects_path, :class => "btn btn-kickstarter btn-sm" %>%>
+
+
+
+<%= render '/shared/footer' %> 
