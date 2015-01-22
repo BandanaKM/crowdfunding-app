@@ -25,12 +25,12 @@ ActiveRecord::Schema.define(version: 20141205035908) do
   add_index "pledges", ["user_id"], name: "index_pledges_on_user_id"
 
   create_table "projects", force: true do |t|
-    t.string   "title"
-    t.string   "creator"
-    t.string   "image"
+    t.string   "title",       limit: nil
+    t.string   "creator",     limit: nil
+    t.string   "image",       limit: nil
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.integer  "subject_id"
     t.integer  "total"
     t.integer  "goal"
@@ -39,18 +39,18 @@ ActiveRecord::Schema.define(version: 20141205035908) do
   add_index "projects", ["subject_id"], name: "index_projects_on_subject_id"
 
   create_table "subjects", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name",       limit: nil
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "users", force: true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.string   "role"
+    t.string   "name",            limit: nil
+    t.string   "email",           limit: nil
+    t.string   "password_digest", limit: nil
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.string   "role",            limit: nil
   end
 
 end
