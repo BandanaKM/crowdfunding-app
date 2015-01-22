@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   get 'welcome/home'
+  
+  get 'welcome/demo'
 
   root to: 'welcome#home'
 
