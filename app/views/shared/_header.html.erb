@@ -8,16 +8,16 @@
   <body>
     <div class="header">
       <div class="container">
-        <div class="col-md-2">
+        <div class="col-md-2 logo-main">
           <%= image_tag "logo.png", size: "161x20" %>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 byline">
           <ul class="primary">
             <li>Discover</li>
             <li>Start</li>
           </ul>
         </div>
-        <div class="pull-right">
+        <div class="user-menu">
           <ul>
           <% if current_user %>
           Signed in as <strong> <%= current_user.name %></strong>
@@ -34,17 +34,3 @@
         </div>
       </div>
     </div>
-
-
-
-
-<!--
-
-            <div class="pull-right">
-          <ul>
-            <li><a href="">Sign up</a></li>
-            <li><a href="#">Log in</a></li>
-          </ul>
-        </div>
-      </div>
-    </div> -->
