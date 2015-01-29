@@ -1,6 +1,6 @@
 class SubjectsController < ApplicationController
 
-  before_action :require_user
+  # before_action :require_user, except: [:index]
 
   # before_action :require_admin, only: [:new, :create, :edit, :update, destroy]
 
