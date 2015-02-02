@@ -10,6 +10,10 @@
   # Users
   User.create(name: "user1", email: "user1@fake.com", password: "1rsu", password_confirmation: "1rsu")
   User.create(name: "user2", email: "user2@fake.com", password: "2rsu", password_confirmation: "2rsu")
+  User.create(name: "user3", email: "user3@fake.com", password: "1rsu", password_confirmation: "1rsu")
+  User.create(name: "user4", email: "user4@fake.com", password: "2rsu", password_confirmation: "2rsu")
+  User.create(name: "user5", email: "user5@fake.com", password: "1rsu", password_confirmation: "1rsu")
+  User.create(name: "user6", email: "user6@fake.com", password: "2rsu", password_confirmation: "2rsu")
 
   # Subjects
 
@@ -188,7 +192,7 @@
  	Project.create(title: 'Graffiti Photo Project', creator: 'Lily Roy', image: 'http://bit.ly/1tivayV', description: "dance_description2 dance_description2 dance_description2", total: 600, goal: 500000,  subject_id: journalism.id)
 
 
- 	Project.create(title: 'Alpaca Textiles', creator: 'Rafik Wallace', image: 'bhttp://bit.ly/1y4DHMI', description: "dance_description2 dance_description2 dance_description2", total: 600, goal: 500000,  subject_id: journalism.id)
+ 	Project.create(title: 'Alpaca Textiles', creator: 'Rafik Wallace', image: 'http://bit.ly/1y4DHMI', description: "dance_description2 dance_description2 dance_description2", total: 600, goal: 500000,  subject_id: journalism.id)
 
 
  	Project.create(title: 'Nature Photography', creator: 'Jaakko Vähälä', image: 'http://bit.ly/1vEQqzO', description: "dance_description2 dance_description2 dance_description2", total: 600, goal: 500000,  subject_id: journalism.id)

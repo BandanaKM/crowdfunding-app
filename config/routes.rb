@@ -10,7 +10,9 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :subjects
+  get '/subjects/:id' => 'projects#index'
+
+  resources :subjects 
 
   # these routes are for showing users a login form, logging them in, and logging them out.
 
@@ -20,6 +22,7 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

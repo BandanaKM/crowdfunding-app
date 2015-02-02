@@ -1,58 +1,3 @@
-<%= render '/shared/header' %>
-
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
-
-<p>
-  <strong>Creator:</strong>
-  <%= @project.creator %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @project.image %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
-
-<p>
-  <strong>Goal:</strong>
-  <%= @project.goal %>
-</p>
-
-<p>
-  <strong>Total:</strong>
-  <%= @project.total %>
-</p>
-
-
-<p>
-  <strong>Distance of time:</strong>
-  <% Time.now %>
-  <% Time.now + 30.days %>
-  <%= distance_of_time_in_words(Time.now, Time.now + 30.days) %>
-</p>
-
-
-<ul>
-  <% @project.rewards.each do |reward| %>
-  <li><a href='/projects/<%= @project.id %>/pledge?amount=<%= reward %>&current_user=<%= current_user.id %>'>Pledge <%= number_to_currency(reward) %></a></li>
-  <% end %>
-</ul>
-
-
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
-
-
 <!doctype html>
 <html>
   <head>
@@ -73,8 +18,8 @@
         </div>
         <div class="pull-right">
           <ul>
-            <li><a href="#">Sign up</a></li>
-            <li><a href="#">Log in</a></li>
+            <li><a href="">Sign up</a></li>
+            <li><a href="">Log in</a></li>
           </ul>
         </div>
       </div>
@@ -104,7 +49,7 @@
                   <h5>pledged of <h5>
                   <h1> <%= number_to_currency(@project.goal) %></h1>
                   <h5>goal<h5>
-                  <h1>4</h1>
+                  <h1><%= distance_of_time_in_words(Time.now, Time.now + 15.days)%>`</h1>
                   <h5>days to go</h5>
                   <% pledges = @project.rewards %>
                   <% min_pledge = pledges.shift %>

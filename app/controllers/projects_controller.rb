@@ -5,7 +5,9 @@ class ProjectsController < ApplicationController
   # before_action :require_admin, only: [:new, :create, :edit, :update, destroy]
 
   def index
-    @projects = Project.all
+     @subject = Subject.find(params[:id])
+     @projects = @subject.projects.all
+     puts @projects
   end
 
   def show
