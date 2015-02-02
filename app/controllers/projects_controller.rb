@@ -7,7 +7,6 @@ class ProjectsController < ApplicationController
   def index
      @subject = Subject.find(params[:id])
      @projects = @subject.projects.all
-     puts @projects
   end
 
   def show
@@ -52,8 +51,7 @@ class ProjectsController < ApplicationController
 
   def pledge
     @project = Project.find(params[:id])
-    @project.pledges.build(amount: params[:amount], user_id: params[:current_user])
-    @project.total = @project.pledges.to_a.sum(&:amount)
+    @project.total = @project.total + params[:amount].to_i
     @project.save
     redirect_to(@project)
   end
