@@ -5,14 +5,8 @@ Rails.application.routes.draw do
   root to: 'welcome#home'
 
   resources :projects do
-    member do
-      get :pledge
-    end
-  end
 
   get '/subjects/:id' => 'projects#index'
-
-  get '/discover' => 'subjects#index' 
 
   resources :subjects 
 
@@ -22,6 +16,7 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
