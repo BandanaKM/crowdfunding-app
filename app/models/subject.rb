@@ -1,8 +1,8 @@
 class Subject < ActiveRecord::Base
 
-  has_many :projects
+  validates :name, presence: true, length: { maximum: 20 }
 
-  validates :name, presence: true, uniqueness: true
+  has_many :projects
 
 
 end

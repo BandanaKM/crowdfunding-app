@@ -52,8 +52,6 @@ group :test do
   gem 'faker', '~> 1.4.3'
   gem 'capybara', '~> 2.4.3'
   gem 'database_cleaner', '~> 1.3.0'
-  gem 'launchy', '~> 2.4.2'
-  gem 'selenium-webdriver', '~> 2.43.0'
 end
 
   # Access an IRB console on exception pages or by using <%= console %> in views

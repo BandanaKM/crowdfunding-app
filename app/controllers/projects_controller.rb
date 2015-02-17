@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
 
   # before_action :require_user
 
-  # before_action :require_admin, only: [:new, :create, :edit, :update, destroy]
+  # before_action :require_admin, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     @projects = Project.all
@@ -15,7 +15,6 @@ class ProjectsController < ApplicationController
   def new
     @project = Project.new
   end
-
 
   def create
     @project = Project.new(project_params)
@@ -48,18 +47,9 @@ class ProjectsController < ApplicationController
   end
 
 
-  def pledge
-    @project = Project.find(params[:id])
-    @project.pledges.build(amount: params[:amount], user_id: params[:current_user])
-    @project.total = @project.pledges.to_a.sum(&:amount)
-    @project.save
-    redirect_to(@project)
-  end
-
-
   private
 
     def project_params
-      params.require(:project).permit(:title, :creator, :image, :description)
+      params.require(:project).permit(:title, :creator, :image)
     end
 end

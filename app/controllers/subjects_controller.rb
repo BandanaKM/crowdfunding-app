@@ -1,8 +1,8 @@
 class SubjectsController < ApplicationController
 
-  before_action :require_user
+  # before_action :require_user
 
-  # before_action :require_admin, only: [:new, :create, :edit, :update, destroy]
+  # before_action :require_admin, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     @subjects = Subject.all
@@ -10,7 +10,6 @@ class SubjectsController < ApplicationController
 
   def show
     @subject = Subject.find(params[:id])
-    @projects = @subject.projects
   end
 
   def new
