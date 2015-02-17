@@ -28,8 +28,8 @@ RSpec.describe Project, :type => :model do
   end
 
 
-  it "is valid with a name shorter than or equal to 50 letters" do
-    project = FactoryGirl.build(:project, name: "a")
+  it "is valid with a title shorter than or equal to 50 letters" do
+    project = FactoryGirl.build(:project, title: "a")
     project.valid?
     expect(project).to be_valid
   end
